@@ -7,14 +7,18 @@ Group:		System/Kernel and hardware
 Url:		http://acpica.org
 # Sources and patches are takes from OpenSUSE
 Source0:	https://acpica.org/sites/acpica/files/acpica-unix2-%{version}.tar.gz
-acpica-unix2-%{version}.tar.bz2
 Source1:	ec_access.c
 Source2:	acpi_genl.tar.bz2
 Source3:	acpi_validate
 Source4:	wmidump.tar.bz2
 Patch1:		acpica-no-compiletime.patch
 Patch2:		wmidump_add_she_bang.patch
-Patch3:		dmar-buf10.patch
+Patch3:         debian-big_endian.patch
+Patch4:         debian-unaligned.patch
+Patch5:         name-miscompare.patch
+Patch6:         aapits-linux.patch
+Patch7:         aapits-ld.patch
+
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	glibc-devel
