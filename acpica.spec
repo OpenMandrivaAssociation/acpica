@@ -16,8 +16,6 @@ Patch2:		wmidump_add_she_bang.patch
 Patch3:         debian-big_endian.patch
 Patch4:         debian-unaligned.patch
 Patch5:         name-miscompare.patch
-Patch6:         aapits-linux.patch
-Patch7:         aapits-ld.patch
 
 %rename 	iasl
 BuildRequires:	bison
@@ -36,9 +34,7 @@ merged into the mainline kernel sources.
 
 %prep
 %setup -q -n acpica-unix2-%{version} -a 2 -a 4
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
+%apply_patches
 
 %build
 cc %{SOURCE1} %{optflags} -o ec_access
