@@ -6,7 +6,8 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://acpica.org
 # Sources and patches are takes from OpenSUSE
-Source0:	acpica-unix2-%{version}.tar.bz2
+Source0:	https://acpica.org/sites/acpica/files/acpica-unix2-%{version}.tar.gz
+acpica-unix2-%{version}.tar.bz2
 Source1:	ec_access.c
 Source2:	acpi_genl.tar.bz2
 Source3:	acpi_validate
