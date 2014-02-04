@@ -19,6 +19,7 @@ Patch5:         name-miscompare.patch
 Patch6:         aapits-linux.patch
 Patch7:         aapits-ld.patch
 
+%rename 	iasl
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	glibc-devel
@@ -56,9 +57,6 @@ install -Dm 755 acpi_genl/acpi_genl %{buildroot}%{_sbindir}/acpi_genl
 
 %makeinstall_std
 
-# We already have iasl package
-rm -f %{buildroot}%{_bindir}/iasl
-
 %files
 %{_bindir}/acpiexamples
 %{_bindir}/acpiexec
@@ -71,6 +69,7 @@ rm -f %{buildroot}%{_bindir}/iasl
 %{_bindir}/acpihelp
 %{_bindir}/acpinames
 %{_bindir}/acpi_validate
+%{_bindir}/iasl
 %{_sbindir}/acpi_genl
 %{_sbindir}/ec_access
 
