@@ -1,4 +1,4 @@
 sources:
-  "acpi_genl.tar.bz2": 4e0f091c69b3f43db706b752b44c7e8b6591107e
-  "acpica-unix2-20130517.tar.bz2": 15cc12be5c1dc3b8a48ab83fe29d6bb87420b8d9
-  "wmidump.tar.bz2": 127a1b769cca3bb008e2120bfeb80b45ebff5cd5
+  acpi_genl.tar.bz2: 4e0f091c69b3f43db706b752b44c7e8b6591107e
+  wmidump.tar.bz2: 127a1b769cca3bb008e2120bfeb80b45ebff5cd5
+  acpica-unix2-20140114.tar.gz: cd71ec28201f3707c2309949303e58b759d02360
