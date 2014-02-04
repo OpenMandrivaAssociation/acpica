@@ -60,6 +60,7 @@ install -Dm 755 acpi_genl/acpi_genl %{buildroot}%{_sbindir}/acpi_genl
 rm -f %{buildroot}%{_bindir}/iasl
 
 %files
+%{_bindir}/acpiexamples
 %{_bindir}/acpiexec
 %{_bindir}/acpixtract
 %{_bindir}/acpisrc
