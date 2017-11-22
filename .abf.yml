@@ -1,4 +1,4 @@
 sources:
   acpi_genl.tar.bz2: 4e0f091c69b3f43db706b752b44c7e8b6591107e
-  acpica-unix2-20170303.tar.gz: ef988097061348549dbb146a6ddcf4cc1a2e01de
   wmidump.tar.bz2: 127a1b769cca3bb008e2120bfeb80b45ebff5cd5
+  acpica-unix-20171110.tar.gz: f92fa66f2b5ea0a94df6f090a6aee0b35c6ee346

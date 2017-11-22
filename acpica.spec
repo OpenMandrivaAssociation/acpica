@@ -1,22 +1,18 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20170303
+Version:	20171110
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://acpica.org
-# Sources and patches are takes from OpenSUSE
-Source0:	https://acpica.org/sites/acpica/files/acpica-unix2-%{version}.tar.gz
+Source0:	https://acpica.org/sites/acpica/files/acpica-unix-%{version}.tar.gz
+# Extra sources and patches are takes from OpenSUSE
 Source1:	ec_access.c
 Source2:	acpi_genl.tar.bz2
 Source3:	acpi_validate
 Source4:	wmidump.tar.bz2
 Patch2:		wmidump_add_she_bang.patch
-Patch3:         debian-big_endian.patch
-Patch4:         debian-unaligned.patch
 Patch5:         name-miscompare.patch
-Patch6:		asllookup-miscompare.patch
-Patch7:		re-enable-big-endian.patch
 
 %rename 	iasl
 BuildRequires:	bison
@@ -34,7 +30,7 @@ the acpica code, it has to be submitted to the acpica project to get
 merged into the mainline kernel sources.
 
 %prep
-%setup -q -n acpica-unix2-%{version} -a 2 -a 4
+%setup -q -n acpica-unix-%{version} -a 2 -a 4
 %apply_patches
 
 %build
