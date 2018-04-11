@@ -1,6 +1,6 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20180209
+Version:	20180313
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -11,6 +11,9 @@ Source1:	ec_access.c
 Source2:	acpi_genl.tar.bz2
 Source3:	acpi_validate
 Source4:	wmidump.tar.bz2
+# Workaround for https://github.com/westes/flex/issues/339
+# Remove once build succeeds without it
+Patch0:		acpica-20180313-flex-workaround.patch
 Patch2:		wmidump_add_she_bang.patch
 Patch5:         name-miscompare.patch
 
