@@ -1,6 +1,6 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20190215
+Version:	20190405
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -15,7 +15,6 @@ Source4:	wmidump.tar.bz2
 # Remove once build succeeds without it
 Patch0:		acpica-20180313-flex-workaround.patch
 Patch2:		wmidump_add_she_bang.patch
-Patch5:         name-miscompare.patch
 
 %rename 	iasl
 BuildRequires:	bison
