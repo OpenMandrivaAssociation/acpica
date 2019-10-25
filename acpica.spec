@@ -38,8 +38,8 @@ merged into the mainline kernel sources.
 %setup_compile_flags
 sed -i -e 's/_CYGWIN/_LINUX/g' -e 's/-Werror//g' generate/unix/Makefile.config
 cc %{SOURCE1} %{optflags} -o ec_access
-%make_build -C acpi_genl CC=%{__cc} CFLAGS="%{optflags}"
-%make_build -C wmidump CC=%{__cc} CFLAGS="%{optflags}"
+%make_build CC=%{__cc} CFLAGS="%{optflags}" -C acpi_genl
+%make_build CC=%{__cc} CFLAGS="%{optflags}" -C wmidump
 %make_build CC=%{__cc} OPT_CFLAGS="%{optflags}" OPT_LDFLAGS="%{ldflags}"
 
 %install
