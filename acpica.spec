@@ -37,9 +37,9 @@ merged into the mainline kernel sources.
 %build
 %setup_compile_flags
 cc %{SOURCE1} %{optflags} -o ec_access
-%make_build -C acpi_genl CFLAGS="%{optflags}"
-%make_build -C wmidump CFLAGS="%{optflags}"
-%make_build OPT_CFLAGS="%{optflags}"
+%make_build -C acpi_genl CC=%{__cc} CFLAGS="%{optflags}"
+%make_build -C wmidump CC=%{__cc} CFLAGS="%{optflags}"
+%make_build CC=%{__cc} OPT_CFLAGS="%{optflags}" OPT_LDFLAGS="%{ldflags}"
 
 %install
 install -Dm 755 %{SOURCE4} %{buildroot}%{_bindir}/acpi_validate
