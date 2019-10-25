@@ -32,7 +32,7 @@ the acpica code, it has to be submitted to the acpica project to get
 merged into the mainline kernel sources.
 
 %prep
-%asetup -q -n acpica-unix-%{version} -a 2 -a 4
+%setup -q -n acpica-unix-%{version} -a 2 -a 4
 %autopatch -p1
 
 %build
