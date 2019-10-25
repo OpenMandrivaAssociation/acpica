@@ -32,7 +32,8 @@ the acpica code, it has to be submitted to the acpica project to get
 merged into the mainline kernel sources.
 
 %prep
-%autosetup -n acpica-unix-%{version} -a 2 -a 4 -p1
+%asetup -q -n acpica-unix-%{version} -a 2 -a 4
+%autopatch -p1
 
 %build
 %setup_compile_flags
