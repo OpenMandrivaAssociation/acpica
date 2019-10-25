@@ -1,7 +1,7 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
 Version:	20191018
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://acpica.org
@@ -32,15 +32,14 @@ the acpica code, it has to be submitted to the acpica project to get
 merged into the mainline kernel sources.
 
 %prep
-%setup -q -n acpica-unix-%{version} -a 2 -a 4
-%apply_patches
+%autosetup -n acpica-unix-%{version} -a 2 -a 4 -p1
 
 %build
 %setup_compile_flags
 cc %{SOURCE1} %{optflags} -o ec_access
-%make -C acpi_genl CFLAGS="%{optflags}"
-%make -C wmidump CFLAGS="%{optflags}"
-%make OPT_CFLAGS="%{optflags}"
+%make_build -C acpi_genl CFLAGS="%{optflags}"
+%make_build -C wmidump CFLAGS="%{optflags}"
+%make_build OPT_CFLAGS="%{optflags}"
 
 %install
 install -Dm 755 %{SOURCE4} %{buildroot}%{_bindir}/acpi_validate
@@ -51,7 +50,7 @@ install -Dm 755 wmidump/wmixtract.py %{buildroot}%{_bindir}/wmixtract
 
 install -Dm 755 acpi_genl/acpi_genl %{buildroot}%{_sbindir}/acpi_genl
 
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/acpiexamples
