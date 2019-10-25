@@ -36,6 +36,7 @@ merged into the mainline kernel sources.
 
 %build
 %setup_compile_flags
+sed -i -e 's/_CYGWIN/_LINUX/g' -e 's/-Werror//g' generate/unix/Makefile.config
 cc %{SOURCE1} %{optflags} -o ec_access
 %make_build -C acpi_genl CC=%{__cc} CFLAGS="%{optflags}"
 %make_build -C wmidump CC=%{__cc} CFLAGS="%{optflags}"
