@@ -1,6 +1,6 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20200326
+Version:	20200430
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
