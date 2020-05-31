@@ -1,6 +1,6 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20200430
+Version:	20200528
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -64,7 +64,6 @@ install -Dm 755 acpi_genl/acpi_genl %{buildroot}%{_sbindir}/acpi_genl
 %{_bindir}/acpidump
 %{_bindir}/acpibin
 %{_bindir}/acpihelp
-%{_bindir}/acpinames
 %{_bindir}/acpi_validate
 %{_bindir}/iasl
 %{_sbindir}/acpi_genl
