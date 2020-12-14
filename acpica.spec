@@ -1,6 +1,6 @@
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20200925
+Version:	20201113
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -36,12 +36,12 @@ merged into the mainline kernel sources.
 %autopatch -p1
 
 %build
-%setup_compile_flags
+%set_build_flags
 sed -i -e 's/_CYGWIN/_LINUX/g' -e 's/-Werror//g' generate/unix/Makefile.config
 cc %{SOURCE1} %{optflags} -o ec_access
 %make_build CC=%{__cc} CFLAGS="%{optflags}" -C acpi_genl
 %make_build CC=%{__cc} CFLAGS="%{optflags}" -C wmidump
-%make_build CC=%{__cc} OPT_CFLAGS="%{optflags}" OPT_LDFLAGS="%{ldflags}"
+%make_build CC=%{__cc} OPT_CFLAGS="%{optflags}" OPT_LDFLAGS="%{build_ldflags}"
 
 %install
 install -Dm 755 %{SOURCE4} %{buildroot}%{_bindir}/acpi_validate
