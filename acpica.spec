@@ -8,7 +8,7 @@ Version:	20230628
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://acpica.org
+Url:		https://acpica.org
 Source0:	https://github.com/acpica/acpica/archive/refs/tags/%{TAG}.tar.gz
 # Extra sources and patches are takes from OpenSUSE
 Source1:	ec_access.c
