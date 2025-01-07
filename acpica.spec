@@ -1,10 +1,11 @@
 %global optflags %{optflags} -Wno-error=unknown-warning-option
 
-%define TAG R%(echo %{version}|cut -b5-6)_%(echo %{version}|cut -b7-8)_%(echo %{version}|cut -b3-4)
+#define TAG R%(echo %{version}|cut -b5-6)_%(echo %{version}|cut -b7-8)_%(echo %{version}|cut -b3-4)
+%define TAG R%(echo %{version}|cut -b1-4)_%(echo %{version}|cut -b5-6)_%(echo %{version}|cut -b7-8)
 
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20240927
+Version:	20241212
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
