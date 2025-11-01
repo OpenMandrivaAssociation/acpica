@@ -1,16 +1,13 @@
 %global optflags %{optflags} -Wno-error=unknown-warning-option
 
-#define TAG R%(echo %{version}|cut -b5-6)_%(echo %{version}|cut -b7-8)_%(echo %{version}|cut -b3-4)
-%define TAG R%(echo %{version}|cut -b1-4)_%(echo %{version}|cut -b5-6)_%(echo %{version}|cut -b7-8)
-
 Summary:	A set of tools to display and debug your BIOS ACPI tables
 Name:		acpica
-Version:	20250404
+Version:	20250807
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		https://acpica.org
-Source0:	https://github.com/acpica/acpica/archive/refs/tags/%{TAG}.tar.gz
+Source0:	https://github.com/acpica/acpica/archive/refs/tags/%{version}.tar.gz
 # Extra sources and patches are takes from OpenSUSE
 Source1:	ec_access.c
 Source2:	acpi_genl.tar.bz2
@@ -37,7 +34,7 @@ the acpica code, it has to be submitted to the acpica project to get
 merged into the mainline kernel sources.
 
 %prep
-%setup -q -n acpica-%{TAG} -a 2 -a 4
+%setup -q -n acpica-%{version} -a 2 -a 4
 %autopatch -p1
 
 %build
