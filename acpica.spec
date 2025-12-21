@@ -19,6 +19,7 @@ Patch0:		acpica-20180313-flex-workaround.patch
 Patch2:		wmidump_add_she_bang.patch
 
 %rename 	iasl
+BuildRequires:	make
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	glibc-devel
