@@ -1,7 +1,6 @@
-diff -up acpica-unix-20180313/generate/unix/iasl/Makefile.omv~ acpica-unix-20180313/generate/unix/iasl/Makefile
---- acpica-unix-20180313/generate/unix/iasl/Makefile.omv~	2018-04-11 15:17:33.141455628 +0200
-+++ acpica-unix-20180313/generate/unix/iasl/Makefile	2018-04-11 15:17:51.892750102 +0200
-@@ -316,7 +316,7 @@ $(OBJDIR)/aslcompiler.y :      $(ASL_PAR
+--- a/generate/unix/iasl/Makefile
++++ b/generate/unix/iasl/Makefile
+@@ -329,7 +329,7 @@ $(OBJDIR)/aslcompiler.y :      $(ASL_PARSER)
  #
  $(OBJDIR)/aslcompilerlex.c :   $(ASL_LEXER)
  	@echo "- " $(LEX) "        "$<
